@@ -1,0 +1,225 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2,
+h3,
+a {
+    color: goldenrod;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.logo {
+    margin: 0;
+    font-size: 1.45em;
+}
+
+.main-nav {
+    margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+
+.main-nav a {
+    color: white;
+    font-size: .99em;
+}
+
+.main-nav a:hover {
+    color: lightgoldenrodyellow;
+}
+
+
+
+header {
+    padding-top: .5em;
+    padding-bottom: 1em;
+    background-color: black;
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+}
+
+header ul li a img {
+    max-height: 3em;
+    margin-right: 1em;
+    margin-bottom: -1em;
+}
+
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.posters {
+    height: 15em;
+    width: 10em;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    margin: 0 3em 1em;
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.5);
+    max-width: 40em;
+}
+
+h4 {
+  font-size: 1.5em;
+    margin-bottom: .8em;
+}
+
+.metadata {
+    max-width: 10em;
+    text-align: center;
+}
+
+.hartje {
+    max-height: 4em;
+    margin: 0 3em 0 1.5em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hartje:hover {
+    transform: rotate(-90deg);
+    transition: 0.5s;
+}
+
+.play {
+    transform: rotate(-90deg);
+    transition: 0.5s;
+}
+
+#notespan {
+    background-color: gray;
+    margin-top: 1em;
+    display: none;
+    border-radius: 1em;
+    font-size: .9em;
+    width: 40%;
+    margin: 1em auto;
+}
+
+.toegevoegd #notespan {
+    display: inherit;
+}
+
+#fancy-off-canvas {
+    overflow:hidden;
+}
+
+#fancy-off-canvas div {
+    position:absolute;
+    width:80%;
+    height:120%;
+    top:0;
+    left:0;
+    padding:10%;
+    background-color:goldenrod;
+    display: block;
+
+    transform:rotate(90deg);
+    transform-origin:top left;
+    transition:.5s;
+}
+
+#fancy-off-canvas div::before {
+    content:"OPGESLAGEN FILMS";
+    position:absolute;
+    height:1.5em;
+    width:15em;
+    text-align:center;
+    background-color:goldenrod;
+    left:50%;
+    top:-1.5em;
+    border-radius:.5em .5em 0 0;
+    transform:translateX(-50%);
+    line-height: 1.8em;
+}
+
+#fancy-off-canvas div::after {
+    content:"OPGESLAGEN FILMS";
+    position:absolute;
+    height:1.5em;
+    right:.5em;
+    top:.5em;
+    text-align: center;
+}
+
+#fancy-off-canvas div:hover  {
+    transform:rotate(0deg);
+}
+
+.postersopgeslagen {
+    height: 15em;
+    width: 10em;
+    object-fit: cover;
+    margin: 1em;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 48em) {
+    header,
+    .main-nav {
+        display: flex;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        header{
+        width: 80%;
+        margin: 0 auto;
+        max-width: 72em;
+    }
+    }
+
+    article {
+        margin: 0 auto 1em;
+    }
+
+}
+
+@media (min-width: 64em) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}

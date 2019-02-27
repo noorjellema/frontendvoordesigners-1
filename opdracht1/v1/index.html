@@ -1,16 +1,101 @@
-<html>
-  <head></head>
-  <body>
-    <p>
-      Hier komt de HTML van de interactieve demo te staan voor de eerste opdracht:
-      Ontwerp een user interface voor een gegeven use case.
-      Werk je ontwerp uit in HTML, CSS en Javascript om te kunnen testen in een browser.
-    </p>
-    <ol>
-      <li>Als ik een lijst films heb gevonden, wil ik leuke films kunnen opslaan om ze thuis te ...</li>
-      <li>In een lijst gevonden studentenhuizen wil ik details kunnen bekijken om te bepalen of de kamer geschikt is.</li>
-      <li>In een verzameling muzieknummers wil ik de volgorde kunnen veranderen om een vette playlist te maken.</li>
-      <li>Als ik foto's zoek wil ik kunnen selecteren op kleur om verassende zoekresultaten te krijgen.</li>
-    </ol>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmlijst</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="witdth=device-width, initial-scale=1">
+</head>
+<body>
+<header class="header">
+    <h1 class="logo"><a href="index.html">Mov4u</a></h1>
+    <ul class="main-nav">
+      <li><a href="#"><img src="images/monitor.svg" alt="tv">Mijn films<span id="notespan">Je hebt een nieuwe film opgeslagen</span></a></li>
+      <li><a href="#"><img src="images/avatar.svg" alt="profiel">Mijn profiel</a></li>
+    </ul>
+</header>
+<main id="main">
+    <h2>Films</h2>
+    <article id="fancy-off-canvas">
+        <div>
+            <img src="images/filmposters/aquaman.jpg" alt="aquaman" class="postersopgeslagen">
+            <img src="images/filmposters/beautyandthebeast.jpg" alt="beautyandthebeast" class="postersopgeslagen">
+            <img src="images/filmposters/blackpanther.jpg" alt="blackpanther" class="postersopgeslagen">
+            <img src="images/filmposters/brave.jpeg" alt="brave" class="postersopgeslagen">
+            <img src="images/filmposters/piratesotcaribbean.jpg" alt="piratesofthecaribbean" class="postersopgeslagen">
+        </div>
+    </article>
+    <article>
+      <img src="images/filmposters/aquaman.jpg" alt="aquaman" class="posters">
+      <div class="metadata">
+        <h4>Aquaman</h4>
+        <ul>
+          <li>2018</li>
+          <li>2u 22m</li>
+        </ul>
+      </div>
+      <div>
+          <img src="images/like.svg" class="hartje" alt="like">
+      </div>
+  </article>
+    <article>
+      <img src="images/filmposters/beautyandthebeast.jpg" alt="beautyandthebeast" class="posters">
+      <div class="metadata">
+        <h4>Beauty and the Beast</h4>
+        <ul>
+          <li>2017</li>
+          <li>2u 10m</li>
+        </ul>
+      </div>
+      <div>
+          <img src="images/like.svg" class="hartje" alt="like">
+      </div>
+  </article>
+    <article>
+      <img src="images/filmposters/blackpanther.jpg" alt="blackpanther" class="posters">
+      <div class="metadata">
+        <h4>Black Panther</h4>
+        <ul>
+          <li>2018</li>
+          <li>2u 15m</li>
+        </ul>
+      </div>
+      <div>
+          <img src="images/like.svg" class="hartje" alt="like">
+      </div>
+  </article>
+    <article>
+      <img src="images/filmposters/brave.jpeg" alt="brave" class="posters">
+      <div class="metadata">
+        <h4>Brave</h4>
+        <ul>
+          <li>2012</li>
+          <li>1u 33m</li>
+        </ul>
+      </div>
+      <div>
+          <img src="images/like.svg" class="hartje" alt="like">
+      </div>
+  </article>
+    <article>
+      <img src="images/filmposters/piratesotcaribbean.jpg" alt="piratesofthecaribbean" class="posters">
+      <div class="metadata">
+        <h4>Pirates of the Caribbean</h4>
+        <ul>
+          <li>2011</li>
+          <li>2u 17m</li>
+        </ul>
+      </div>
+      <div>
+          <img src="images/like.svg" class="hartje" alt="like">
+      </div>
+  </article>
+
+
+</main>
+
+</body>
+
+    <script type="text/javascript" src="script/java.js"></script>
 </html>
