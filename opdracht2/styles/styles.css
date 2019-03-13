@@ -3,14 +3,26 @@
     font-family: sans-serif;
 }
 
+html {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
     text-align: center;
+    color: white;
 }
 
 .slideshow-container {
     max-width: 40em;
     position: relative;
     margin: auto;
+}
+
+img {
+    width: 100%;
+    box-shadow: 0px 20px 10px 10px rgba(0,0,0,0.5);
 }
 
 .mySlides {
@@ -38,7 +50,7 @@ h1 {
 }
 
 .vorig:hover, .volgend:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(238, 238, 238, .8);
 }
 
 p {
@@ -59,35 +71,31 @@ p {
     top: 0;
 }
 
+.dots {
+    text-align: center;
+}
+
 .dot {
     cursor: pointer;
     height: 1em;
     width: 1em;
-    margin: .5em .1em;
-    background-color: #bbb;
+    margin: 2em .1em;
+    background-color: #fff;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: #bbb;
 }
 
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
 }
 
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-}
-
-.fotosverbergen {
-    display: none;
-}
-
-.fotoshowen {
-    display: block;
 }

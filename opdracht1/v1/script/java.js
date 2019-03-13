@@ -1,5 +1,5 @@
 var body = document.querySelector('body');
-var hartje = document.querySelector('#main article div img')
+var hartje = document.querySelector('#main article div img');
 
 hartje.onclick = function () {
     body.classList.add('toegevoegd');
