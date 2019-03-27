@@ -4,7 +4,46 @@
 body{
   margin:1em;
   font: 2em/1 helvetica;
+  background-color: black;
 }
+
+h1 {
+  font-size: 1em;
+  color: white;
+}
+
+button {
+  background-color: lightpink; /* Green */
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+}
+
+h2 {
+  font-size: 1em;
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: .5em;
+}
+
+article {
+  max-width: 50%;
+  margin: 1em auto;
+  background-color: rosybrown;
+}
+
+img {
+  width: 50%;
+
+}
+
 span{
   color: green;
   margin: 0;
@@ -15,9 +54,11 @@ span{
   transition: all 1s ease;
   display: none;
 }
+
 .show{
   display: inline;
 }
+
 .hide{
   display: none;
 }

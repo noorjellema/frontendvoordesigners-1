@@ -6,7 +6,7 @@
 //var uri = "https://open.data.amsterdam.nl/Activiteiten.json";
 //var uri = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 //var uri = "http://dennistel.nl/movies"; //online, geen https
-var uri = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //json file op github
+var uri = 'https://noorjellema.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //json file op github
 var button = document.querySelector("button");
 var loaderElement = document.querySelector("span");
 var section = document.querySelector('section');
@@ -22,12 +22,13 @@ function showData(jsonObj) {
     var filmpiekijken = document.createElement('article');
 
     //TITEL, COVER EN BESCHRIJVING
+    var filmcover = document.createElement('img');
+      filmcover.src = films[i].cover;
     var filmtitel = document.createElement('h2');
       filmtitel.textContent = films[i].title;
     var filmplot = document.createElement('p');
       filmplot.textContent = films[i].simple_plot;
-    var filmcover = document.createElement('img');
-      filmcover.src = films[i].cover;
+
     //myImg.textContent = films[i].cover;
     //console.log(filmcover.src);
 
@@ -70,8 +71,8 @@ function showData(jsonObj) {
 
     //ALLE DATA KOPPELEN
     filmpiekijken.appendChild(filmtitel);
-    filmpiekijken.appendChild(filmplot);
     filmpiekijken.appendChild(filmcover);
+    filmpiekijken.appendChild(filmplot);
     filmpiekijken.appendChild(reviewsbutton);
     filmpiekijken.appendChild(reviewslezen);
 
