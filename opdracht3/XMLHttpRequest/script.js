@@ -6,7 +6,7 @@
 //var uri = "https://open.data.amsterdam.nl/Activiteiten.json";
 //var uri = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 //var uri = "http://dennistel.nl/movies"; //online, geen https
-var uri = 'https://noorjellema.github.io/frontendvoordesigners/opdracht3/json/movies.json'; //json file op github
+var uri = 'movies.json'; //json file op github
 var button = document.querySelector("button");
 var loaderElement = document.querySelector("span");
 var section = document.querySelector('section');
@@ -66,15 +66,12 @@ function showData(jsonObj) {
       console.log("Is dit de button?",button);
     }); //end: reviewslezen click
 
-
-
-
     //ALLE DATA KOPPELEN
-    filmpiekijken.appendChild(filmtitel);
-    filmpiekijken.appendChild(filmcover);
-    filmpiekijken.appendChild(filmplot);
-    filmpiekijken.appendChild(reviewsbutton);
-    filmpiekijken.appendChild(reviewslezen);
+      filmpiekijken.appendChild(filmtitel);
+      filmpiekijken.appendChild(filmcover);
+      filmpiekijken.appendChild(filmplot);
+      filmpiekijken.appendChild(reviewsbutton);
+      filmpiekijken.appendChild(reviewslezen);
 
     //HTML INJECTION IN BESTAANDE SECTION
     section.appendChild(filmpiekijken);
@@ -118,16 +115,14 @@ function loadimagesmetXHR(){
 
 //actie
 button.onclick = function(){
-  loaderElement.classList.add('show');
+    loaderElement.classList.add('show');
+    button.classList.add('hide');
   //this.classList.add('hide');
   //hier iets doen met de button die laadt, dan weer gewoon een button wordt ...
 
   section.innerHTML = ""; //main leeghalen. just in case
   loadimagesmetXHR();
 };
-
-
-
 
 
 

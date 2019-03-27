@@ -1,71 +1,92 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 body{
-  margin:1em;
-  font: 2em/1 helvetica;
-  background-color: black;
+    margin:1em;
+    font: 2em/1 helvetica;
+    background-color: black;
 }
 
 h1 {
-  font-size: 1em;
-  color: white;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    color: red;
+}
+
+header {
+    text-align: center;
 }
 
 button {
-  background-color: lightpink; /* Green */
-  border: none;
-  color: white;
-  padding: 1em 2em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1em;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: .5em;
 }
 
 h2 {
-  font-size: 1em;
-  color: white;
+    text-align: center;
+    padding: .5em 0;
+    font-size: .8em;
+    color: white;
+    background-color: grey;
+    margin: 0 0 1em 0;
+    height: 3.5em
 }
 
 p {
-  color: white;
-  font-size: .5em;
+    color: black;
+    font-size: .5em;
 }
 
 article {
-  max-width: 50%;
-  margin: 1em auto;
-  background-color: rosybrown;
+    text-align: center;
+    max-width: 40%;
+    margin: 1em .8em;
+    background-color: white;
+    padding-bottom: .5em
 }
 
 img {
-  width: 50%;
-
+    width: 50%;
+    margin: auto;
 }
 
 span{
-  color: green;
-  margin: 0;
-  padding: 1em;
-  width: calc(6 * 450px);
-  list-style-position: inside;
-  background: DARKSEAGREEN;
-  transition: all 1s ease;
-  display: none;
+    color: green;
+    margin: 0;
+    padding: 1em;
+    width: calc(6 * 450px);
+    list-style-position: inside;
+    background: DARKSEAGREEN;
+    transition: all 1s ease;
+    display: none;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
 }
 
 .show{
-  display: inline;
+    display: inline;
+    transition: 2s;
 }
 
 .hide{
-  display: none;
+    display: none;
 }
 
 /* ************* */
 section ul{
-  display: none;
-  padding: 0;
-  background: pink;
+    display: none;
+    padding: 0;
+    background: pink;
 }
