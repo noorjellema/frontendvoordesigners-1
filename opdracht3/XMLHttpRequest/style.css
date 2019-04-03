@@ -31,7 +31,7 @@ button {
 
 h2 {
     text-align: center;
-    padding: .5em 0;
+    padding: .8em 0;
     font-size: .8em;
     color: white;
     background-color: grey;
@@ -42,6 +42,8 @@ h2 {
 p {
     color: black;
     font-size: .5em;
+    padding: 0 1em;
+    text-align: left;
 }
 
 article {
@@ -73,6 +75,18 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
+}
+
+li, ul {
+    font-size: .7em;
+}
+
+article > p:nth-of-type(4){
+    display: none;
+}
+
+article > p.show:nth-of-type(4){
+    display: inline-block;
 }
 
 .show{

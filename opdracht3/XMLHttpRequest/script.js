@@ -24,8 +24,10 @@ function showData(jsonObj) {
     //TITEL, COVER EN BESCHRIJVING
     var filmcover = document.createElement('img');
       filmcover.src = films[i].cover;
+
     var filmtitel = document.createElement('h2');
       filmtitel.textContent = films[i].title;
+
     var filmplot = document.createElement('p');
       filmplot.textContent = films[i].simple_plot;
 
@@ -34,9 +36,17 @@ function showData(jsonObj) {
 
     //GENRES
     var genres = films[i].genres;
+      console.log(genres);
     for (var n = 0; n < genres.length; n++) {
       console.log("genre: ",genres[n]);
     } //end for genres
+
+    var genres = document.createElement('p');
+      genres.textContent = films[i].genres;
+
+    var release = document.createElement('p');
+      release.textContent = films[i].release_date;
+
 
     //REVIEWS
     var reviewslezen = document.createElement('ul');
@@ -49,6 +59,18 @@ function showData(jsonObj) {
       listItem.textContent = reviews[j].score + ' - ' + reviews[j].created_at;
       reviewslezen.appendChild(listItem);
     } //end: for reviews
+
+    var meerlezen = document.createElement('p');
+    var leesmeerbutton = document.createElement('button');
+      leesmeerbutton.textContent = "Lees meer";
+        meerlezen.textContent = films[i].plot;
+
+    leesmeerbutton.info = meerlezen;
+    leesmeerbutton.onclick = function(){
+      console.log("click this =" + this.info, this); //met this, verwijs je naar het object zelf waar de functie wordt uitgevoerd, hier gebruik ik de variabale die in in het object heb aangemaakt
+      //console.log("parentNode",this.parentNode);
+      this.info.classList.toggle('show')
+    }
 
 
     //functies om elementen toe te voegen
@@ -69,9 +91,13 @@ function showData(jsonObj) {
     //ALLE DATA KOPPELEN
       filmpiekijken.appendChild(filmtitel);
       filmpiekijken.appendChild(filmcover);
+      filmpiekijken.appendChild(release);
+      filmpiekijken.appendChild(genres);
       filmpiekijken.appendChild(filmplot);
-      filmpiekijken.appendChild(reviewsbutton);
-      filmpiekijken.appendChild(reviewslezen);
+      filmpiekijken.appendChild(leesmeerbutton);
+      filmpiekijken.appendChild(meerlezen);
+//      filmpiekijken.appendChild(reviewsbutton);
+//      filmpiekijken.appendChild(reviewslezen);
 
     //HTML INJECTION IN BESTAANDE SECTION
     section.appendChild(filmpiekijken);
