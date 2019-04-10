@@ -20,6 +20,7 @@ var vorige = document.querySelector(".vorig");
 
 alleGenresKnop.addEventListener('click', function () {
     body.classList = '';
+    body.classList.toggle('genres');
     slideIndex = 1;
 });
 
@@ -135,3 +136,4 @@ window.onkeydown = function(event) {
            plusGenre(1);
        }
   };
+
