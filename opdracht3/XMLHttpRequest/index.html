@@ -5,10 +5,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+       <h1>Lekker films klikken</h1>
+        <ul class="menu">
+            <li class="menu-item genres"><a href="#">Alle genres</a></li>
+            <li class="menu-item action"><a href="#">Action</a></li>
+            <li class="menu-item adventure"><a href="#">Adventure</a></li>
+            <li class="menu-item crime"><a href="#">Crime</a></li>
+            <li class="menu-item drama"><a href="#">Drama</a></li>
+            <li class="menu-item horror"><a href="#">Horror</a></li>
+            <li class="menu-item thriller"><a href="#">Thriller</a></li>
+        </ul>
+    </header>
     <main>
       <header>
-        <h1>Lekker films klikken</h1>
-        <button>laad data</button>
+
+        <button id="laadbutton">laad data</button>
       </header>
       <span id=loader>Loading data ...</span>
 
@@ -19,5 +31,6 @@
     </main>
 
     <script src="script.js"></script>
+    <script src="filteren.js"></script>
   </body>
 </html>

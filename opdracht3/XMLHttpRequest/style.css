@@ -1,6 +1,89 @@
 * {
     box-sizing: border-box;
 }
+
+.action main section > article:first-of-type,
+.action main section > article:nth-of-type(2),
+.action main section > article:nth-of-type(3),
+.action main section > article:nth-of-type(4),
+.action main section > article:nth-of-type(6){
+    display: none;
+}
+
+.adventure main section > article:first-of-type,
+.adventure main section > article:nth-of-type(2),
+.adventure main section > article:nth-of-type(3),
+.adventure main section > article:nth-of-type(4),
+.adventure main section > article:nth-of-type(6){
+    display: none;
+}
+
+
+.crime main section > article:first-of-type,
+.crime main section > article:nth-of-type(5),
+.crime main section > article:nth-of-type(6){
+    display: none;
+}
+
+
+.drama main section > article:first-of-type,
+.drama main section > article:nth-of-type(5){
+    display: none;
+}
+
+
+.horror main section > article:nth-of-type(2),
+.horror main section > article:nth-of-type(3),
+.horror main section > article:nth-of-type(4),
+.horror main section > article:nth-of-type(5),
+.horror main section > article:nth-of-type(6){
+    display: none;
+}
+
+.thriller main section > article:first-of-type,
+.thriller main section > article:nth-of-type(2),
+.thriller main section > article:nth-of-type(3),
+.thriller main section > article:nth-of-type(5),
+.thriller main section > article:nth-of-type(6){
+    display: none;
+}
+
+header ul {
+    display: none;
+}
+
+
+.menu.show {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.menu-item a {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.menu-item a:hover {
+    color: grey;
+}
+
+.genres header ul li:first-of-type a,
+.action header ul li:nth-of-type(2) a,
+.adventure header ul li:nth-of-type(3) a,
+.crime header ul li:nth-of-type(4) a,
+.drama header ul li:nth-of-type(5) a,
+.horror header ul li:nth-of-type(6) a,
+.thriller header ul li:nth-of-type(7) a{
+    color: grey;
+    text-decoration: underline;
+}
+
 body{
     margin:1em;
     font: 2em/1 helvetica;
@@ -8,10 +91,11 @@ body{
 }
 
 h1 {
-    font-size: 1em;
+    font-size: 1.5em;
     color: white;
     text-align: center;
     color: red;
+    margin-bottom: 0;
 }
 
 header {
@@ -29,14 +113,20 @@ button {
     font-size: .5em;
 }
 
+#laadbutton {
+    margin-top: 2em;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
 h2 {
     text-align: center;
     padding: .8em 0;
-    font-size: .8em;
+    font-size: .7em;
     color: white;
     background-color: grey;
     margin: 0 0 1em 0;
-    height: 3.5em
+    height: 4em
 }
 
 p {
@@ -46,26 +136,37 @@ p {
     text-align: left;
 }
 
+p:nth-of-type(2){
+    color: red;
+}
+
 article {
     text-align: center;
-    max-width: 40%;
-    margin: 1em .8em;
+    max-width:30%;
+    margin: 1em .5em;
     background-color: white;
     padding-bottom: .5em
 }
 
+
+
 img {
     width: 50%;
     margin: auto;
+    transition: 1s;
+}
+
+img:hover {
+    width: 100%;
 }
 
 span{
-    color: green;
+    color: white;
     margin: 0;
     padding: 1em;
     width: calc(6 * 450px);
     list-style-position: inside;
-    background: DARKSEAGREEN;
+    background: red;
     transition: all 1s ease;
     display: none;
 }
@@ -96,11 +197,4 @@ article > p.show:nth-of-type(4){
 
 .hide{
     display: none;
-}
-
-/* ************* */
-section ul{
-    display: none;
-    padding: 0;
-    background: pink;
 }
